@@ -16,3 +16,14 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+rev = int(input('Enter value of revenue: '))
+cos = int(input('Enter value of costs: '))
+if rev > cos:
+    print(f'Your firm is good! It is PROFIT!')
+    prf = rev - cos
+    print(f'Profit of your firm - {prf}')
+    print(f'Profitability of your firm = {round(prf / rev, 3)}')
+    ppl = int(input('Enter count of people working in your firm: '))
+    print(f'Profit firm on one employee = {round(prf/ppl, 2)}')
+else:
+    print('Your firm works bad :(')
