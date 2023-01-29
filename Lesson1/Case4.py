@@ -18,12 +18,15 @@
 """
 rev = int(input('Enter value of revenue: '))
 cos = int(input('Enter value of costs: '))
-if rev > cos:
-    print(f'Your firm is good! It is PROFIT!')
-    prf = rev - cos
-    print(f'Profit of your firm - {prf}')
-    print(f'Profitability of your firm = {round(prf / rev, 3)}')
-    ppl = int(input('Enter count of people working in your firm: '))
-    print(f'Profit firm on one employee = {round(prf/ppl, 2)}')
+if rev == cos:
+    print('Your firm working on point out of costs.')
 else:
-    print('Your firm works bad :(')
+    if rev > cos:
+        print(f'Your firm is good! It is PROFIT!')
+        prf = rev - cos
+        print(f'Profit of your firm - {prf}')
+        print(f'Profitability of your firm = {round(prf / rev, 3)}')
+        ppl = int(input('Enter count of people working in your firm: '))
+        print(f'Profit firm on one employee = {round(prf/ppl, 2)}')
+    else:
+        print('Your firm works bad :(')
