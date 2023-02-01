@@ -13,3 +13,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+lst = [5, "STRING", 0.15, True, None]
+i = 0
+while i < len(lst):
+    print(f'{i+1} value is {lst[i]}, type is: {type(lst[i])}')
+    i += 1
