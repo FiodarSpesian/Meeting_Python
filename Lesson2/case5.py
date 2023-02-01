@@ -13,3 +13,12 @@
 1. раз
 2. перерефриж
 """
+st = input(f'Enter words by the space: ').split()
+i = 0
+while i < len(st):
+    if len(st[i]) < 10:
+        print(f'{i + 1}. {st[i]}')
+    else:
+        i_th = st[i]
+        print(f'{i + 1}. {i_th[:10]}')
+    i += 1
