@@ -12,3 +12,10 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+lst = [7, 5, 3, 3, 2]
+val = int(input("Enter different value: "))
+lst.append(val)
+lst.sort()
+lst.reverse()
+print("Result:", end=" ")
+print(*lst)
