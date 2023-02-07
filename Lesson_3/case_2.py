@@ -12,3 +12,9 @@
 1. раз
 2. перерефриж
 """
+st = input("Enter words by the space: ").split(' ')
+i = 0
+for el in st:
+    print(f"{i+1}. {el[:10]}")
+    i += 1
+
