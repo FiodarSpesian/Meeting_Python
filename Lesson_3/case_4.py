@@ -41,7 +41,7 @@ for i in range(count):
 #analyze = {"name": }
 #res = []
 for i in range(len(lst_tpl)):
-    #res.append(lst_tpl[i][i]["name"])
+
 print(len(lst_tpl))
 
 
