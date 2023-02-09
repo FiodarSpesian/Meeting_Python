@@ -2,12 +2,16 @@
 Задайте натуральное число N.
 Напишите программу, которая составит список простых множителей числа N.
 """
-num = int(input(f"Enter number: "))
+num = int(input("Введите число: "))
+i = 2  # первое простое число
 lst = []
-for i in range(num):
-    if num % (i + 1) == 0:
-        lst.append(i+1)
-    for el in lst:
-        if el % 2 == 0:
-            lst.remove(el)
-print(lst)
+old = num
+while i <= num:
+    if num % i == 0:
+        lst.append(i)
+        num //= i
+        i = 2
+    else:
+        i += 1
+lst = set(lst)
+print(f"Простые множители числа {old} приведены в списке: {lst}")
