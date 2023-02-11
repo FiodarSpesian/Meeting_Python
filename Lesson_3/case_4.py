@@ -21,3 +21,28 @@
 “ед”: [“шт.”]
 }
 """
+
+
+def dt_enter(mes):
+    res = input(f"Enter {mes} of product: ")
+    return res
+
+
+def fill_dict():
+    dicti = {"name": dt_enter("name"), "price": dt_enter("price"), "count": dt_enter("count"), "unit": dt_enter("unit")}
+    return dicti
+
+
+count = int(input(f"How many products would you include: "))
+lst_tpl = []
+for i in range(count):
+    prd = (i + 1, fill_dict())
+    lst_tpl.append(prd)
+#analyze = {"name": }
+#res = []
+for i in range(len(lst_tpl)):
+
+print(len(lst_tpl))
+
+
+
