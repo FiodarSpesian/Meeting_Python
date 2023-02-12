@@ -23,3 +23,35 @@
 Вы вместо трехзначного числа ввели строку (((. Исправьтесь
 Введите операцию (+, -, *, / или 0 для выхода):
 """
+
+
+def operations():
+    func = input("Enter operation (+, -, *, / or 0 for exit):")
+    if func == "0":
+        return print("You have been exit from the program!")
+    elif func != 0:
+        if func == "+":
+            print(f"Result: {el1 + el2}")
+            operations()
+        elif func == "-":
+            print(f"Result: {el1 - el2}")
+            operations()
+        elif func == "*":
+            print(f"Result: {el1 * el2}")
+            operations()
+        elif func == "/":
+            print(f"Result: {round((el1 / el2), 3)}")
+            operations()
+
+
+try:
+    el1 = int(input(f"Enter first number:"))
+    el2 = int(input(f"Enter second number:"))
+except ValueError:
+    print("Is not an integer, try again.")
+    el1 = int(input(f"Enter first number:"))
+    el2 = int(input(f"Enter second number:"))
+else:
+    print("All right!")
+finally:
+    operations()
