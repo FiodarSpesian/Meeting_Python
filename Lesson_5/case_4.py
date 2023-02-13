@@ -8,3 +8,16 @@
 Решите через рекурсию. В задании нельзя применять циклы.
 Нужно обойтисть без создания массива!
 """
+num = int(input("Enter count of values: "))
+
+
+def sum_values(cnt, res=1, count=1, sum_my=1):
+    if cnt <= count:
+        return print(f"Count of values: {cnt}, summ: {sum_my} ")
+    res /= (-2)
+    sum_my += res
+    count += 1
+    sum_values(cnt, res, count, sum_my)
+
+
+sum_values(num)
