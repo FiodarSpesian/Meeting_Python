@@ -16,3 +16,19 @@
 Решите через рекурсию. В задании нельзя применять циклы.
 Допускается исп-е встроенных ф-ций
 """
+lst = list()
+
+
+def table_ascii(arr, count=32):
+    if count == 128:
+        return print(*arr[-15:])
+    arr.append(count)
+    arr.append("-")
+    arr.append(chr(count))
+    if len(arr) % 30 == 0:
+        print(*arr[-30:])
+    count += 1
+    table_ascii(arr, count)
+
+
+table_ascii(lst)
