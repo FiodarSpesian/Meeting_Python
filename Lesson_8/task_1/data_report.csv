@@ -4,3 +4,13 @@
 2,ACER,Windows 10,00971-OEM-1982661-00231,x64-based
 
 3,DELL,Windows 8.1,00971-OEM-1982661-00231,x86-based
+
+Изготовитель ОС:	Название ОС:	Код продукта:	Тип системы:	
+Microsoft	['Windows', '7']	00971-OEM-1982661-00231	x64-based	
+Microsoft	['Windows', '10']	00971-OEM-1982661-00231	x64-based	
+Microsoft	['Windows', '8.1']	00971-OEM-1982661-00231	x86-based
+
+Изготовитель ОС:	Название ОС:	Код продукта:	Тип системы:	
+Microsoft	Windows	00971-OEM-1982661-00231	x64-based	
+Microsoft	7	00971-OEM-1982661-00231	x64-based	
+Microsoft	Windows	00971-OEM-1982661-00231	x86-based	

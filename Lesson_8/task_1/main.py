@@ -36,4 +36,49 @@ os_code_list, os_type_list. В этой же функции создать гл�
 
 ПРОШУ ВАС НЕ УДАЛЯТЬ СЛУЖЕБНЫЕ ФАЙЛЫ TXT И ИТОГОВЫЙ ФАЙЛ CSV!!!
 """
+import re
 
+
+def get_data():
+    os_prod_list = []
+    os_name_list = []
+    os_code_list = []
+    os_type_list = []
+    main_data = [["Изготовитель ОС:", "Название ОС:", "Код продукта:", "Тип системы:"],
+                 [os_prod_list, os_name_list, os_code_list, os_type_list]]
+    for i in range(3):
+        with open(f"info_{i+1}.txt") as file_obj:
+            data = file_obj.read()
+            os_prod_el = re.compile(r'Изготовитель ОС:\s*\S*')
+            os_prod_list.append(os_prod_el.findall(data)[0].split()[2])
+            os_name_el = re.compile(r'Название ОС:\s*\S*\s*\S*\s*\S*')
+            os_name_list.append(os_name_el.findall(data)[0].split()[3:])
+            os_code_el = re.compile(r'Код продукта:\s*\S*')
+            os_code_list.append(os_code_el.findall(data)[0].split()[2])
+            os_type_el = re.compile(r'Тип системы:\s*\S*')
+            os_type_list.append(os_type_el.findall(data)[0].split()[2])
+    return main_data
+
+
+def write_to_csv():
+    lst = get_data()
+    with open("data_report.csv", "a", encoding="utf-8") as d_r:
+        for i in range(len(lst)):
+            if i == 0:
+                for j in range(len(lst[i])):
+                    d_r.writelines(f"{lst[i][j]}\t")
+        d_r.writelines("\n")
+        for i in range(len(lst)):
+            if i > 0:
+                for j in range(len(lst[i])):
+                    d_r.writelines(f"{lst[i][j][0]}\t")
+                d_r.writelines("\n")
+                for j in range(len(lst[i])):
+                    d_r.writelines(f"{lst[i][j][1]}\t")
+                d_r.writelines("\n")
+                for j in range(len(lst[i])):
+                    d_r.writelines(f"{lst[i][j][2]}\t")
+
+
+get_data()
+write_to_csv()
