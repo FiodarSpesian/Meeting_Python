@@ -41,5 +41,6 @@ values = code_points(lst)
 for i in range(len(lst)):
     print(f"{lst[i]} -- буквкееый формат")
     print(f"{values[i]} -- набор кодовых точек")
+    print()
 
 
