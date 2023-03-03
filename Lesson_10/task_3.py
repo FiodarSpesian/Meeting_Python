@@ -9,3 +9,18 @@
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
+import json
+lst = [b"attribute", b"функция", b"type"]
+n_lst = []
+
+try:
+    for el in lst:
+        n_lst.append(el)
+        print(el)
+except SyntaxError:
+    print("Для преобразования можно использовать тоько латиницу!")
+else:
+    print("Все в порядке!")
+print(n_lst)
+
+
