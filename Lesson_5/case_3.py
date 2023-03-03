@@ -15,3 +15,16 @@
 Не забудьте проверить на числе, которое оканчивается на 0.
 1230 -> 0321
 """
+number = int(input("Enter number for reverse: "))
+
+
+def replace(val, n_val=""):
+    n_val += str(val % 10)
+    print(n_val)
+    val //= 10
+    if val / 10 == 0:
+        return print(f"Your reversed number {n_val}")
+    replace(val, n_val)
+
+
+replace(number)

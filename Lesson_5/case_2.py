@@ -14,3 +14,20 @@
 Введите число: 123
 Количество четных и нечетных цифр в числе равно: (1, 2)
 """
+number = list(input("Enter number: "))
+print(number)
+
+
+def even_odd(val, ev=0, od=0):
+    if len(val) == 0:
+        return print(f"Count of even: {ev} and odd: {od} values in number.")
+    a = int(val.pop())
+    print(a)
+    if a % 2 == 1:
+        od += 1
+    elif a % 2 == 0:
+        ev += 1
+    even_odd(val, ev, od)
+
+
+even_odd(number)

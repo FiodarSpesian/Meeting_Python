@@ -10,3 +10,15 @@
 Правой части выражения в рекурсивной ф-ции быть не должно!
 Решите через рекурсию. В задании нельзя применять циклы.
 """
+num = int(input("Enter number: "))
+
+
+def sum_num(el, val=1, res=0):
+    res += val
+    if el == val:
+        return print(f"Result: {res} = {el*(el+1)/2} ")
+    val += 1
+    sum_num(el, val, res)
+
+
+sum_num(num)

@@ -6,3 +6,23 @@
 то вывести загаданное число.
 Решите через рекурсию. В задании нельзя применять циклы.
 """
+from random import randint
+el = randint(0, 100)
+print(f"Загаданно целое число в промежутке от 0 до 100.")
+print(f"У вас есть 10 попыток чтобы его отгадать.")
+
+
+def find_num(num, att=1):
+    t_ry = int(input(f"Попробуйте отгадать число на {att} попытке. Введите число: "))
+    if t_ry != num:
+        if t_ry < num:
+            print("Загаданное число больше вашего.\t")
+        elif t_ry > num:
+            print("\tЗагаданное число меньше вашего.")
+    if att == 10 or t_ry == num:
+        return print(f"Загаданное число было: {num}")
+    att += 1
+    find_num(num, att)
+
+
+find_num(el)
