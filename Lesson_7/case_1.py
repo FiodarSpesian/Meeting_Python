@@ -11,3 +11,29 @@
 в указанном порядке (красный, желтый, зеленый).
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class TrafficLight:
+    __color = ["red", "yellow", "green"]
+
+    def __init__(self, param):
+        self.param = "TrafficLight"
+
+    def running(self, val):
+        for el in val:
+            if el == "red":
+                print(el)
+                time.sleep(7)
+            elif el == "yellow":
+                print(el)
+                time.sleep(2)
+            elif el == "green":
+                print(el)
+                time.sleep(4)
+                return
+
+
+color = ["red", "yellow", "green"]
+a = TrafficLight(color)
+a.running(color)
